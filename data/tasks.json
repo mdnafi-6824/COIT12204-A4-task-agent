@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Submit COIT12204 Assessment 3",
+    "description": "Final report, code and demo video via Moodle.",
+    "priority": "high",
+    "due_date": "2026-10-13",
+    "status": "in_progress",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 2,
+    "title": "Renew campus WiFi certificate",
+    "description": "Cert expires soon, staff will lose access if missed.",
+    "priority": "high",
+    "due_date": "2026-10-14",
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 3,
+    "title": "Weekly team stand-up notes",
+    "description": "Write up action items from Monday stand-up.",
+    "priority": "low",
+    "due_date": "2026-10-15",
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 4,
+    "title": "Order new iPads for assessment lab",
+    "description": "Get three quotes and send purchase request to finance.",
+    "priority": null,
+    "due_date": "2026-10-22",
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 5,
+    "title": "Fix login bug on student portal",
+    "description": "Users report 500 error when password contains an ampersand.",
+    "priority": null,
+    "due_date": "2026-10-10",
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 6,
+    "title": "Draft newsletter for October intake",
+    "description": "Marketing wants a draft by mid month, no firm date yet.",
+    "priority": "medium",
+    "due_date": null,
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 7,
+    "title": "Archive 2024 enrolment records",
+    "description": "Move old records to cold storage. Nobody is waiting on this.",
+    "priority": "low",
+    "due_date": "2026-11-06",
+    "status": "todo",
+    "created_at": "2026-09-28"
+  },
+  {
+    "id": 8,
+    "title": "Update README for attendance system",
+    "description": "Document the new export endpoint.",
+    "priority": "low",
+    "due_date": "2026-10-05",
+    "status": "done",
+    "created_at": "2026-09-28"
+  }
+]

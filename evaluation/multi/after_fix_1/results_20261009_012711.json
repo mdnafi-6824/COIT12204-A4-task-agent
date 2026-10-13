@@ -1,0 +1,144 @@
+{
+  "summary": {
+    "label": "reviewer=both worker=BROKEN",
+    "model": "claude-sonnet-4-6",
+    "runs": 8,
+    "approved": 1.0,
+    "accuracy": 0.875,
+    "with_revisions": 8,
+    "total_rejections": 8,
+    "fallbacks": 0,
+    "mean_steps": 6,
+    "mean_elapsed_ms": 818
+  },
+  "rows": [
+    {
+      "case": "M1_explicit_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 776,
+      "answer": "high"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 857,
+      "answer": "low"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 723,
+      "answer": "medium"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 603,
+      "answer": "high"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 1020,
+      "answer": "2026-10-10"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 1108,
+      "answer": "2026-10-16"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": true,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 757,
+      "answer": "4 open task(s) due in the next 7 days, 1 overdue. Most urgen"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 6,
+      "revisions": 1,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+      ],
+      "errors": [
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 706,
+      "answer": "medium"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "summary": {
+    "label": "reviewer=both",
+    "model": "claude-sonnet-4-6",
+    "runs": 16,
+    "approved": 0.9375,
+    "accuracy": 0.9375,
+    "with_revisions": 2,
+    "total_rejections": 5,
+    "fallbacks": 1,
+    "mean_steps": 3.8,
+    "mean_elapsed_ms": 12305
+  },
+  "rows": [
+    {
+      "case": "M1_explicit_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 8435,
+      "answer": "high"
+    },
+    {
+      "case": "M1_explicit_high",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7503,
+      "answer": "high"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 6598,
+      "answer": "low"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7352,
+      "answer": "low"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7485,
+      "answer": "medium"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7426,
+      "answer": "medium"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 6915,
+      "answer": "high"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7180,
+      "answer": "high"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 6872,
+      "answer": "2026-10-09"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7048,
+      "answer": "2026-10-09"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 8683,
+      "answer": "2026-10-15"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7370,
+      "answer": "medium"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The summary claims '8 total tasks (7 not yet done)' but the context only contains 4 open tasks with no data supporting 8 total tasks.",
+        "The summary claims there are 8 total tasks and 7 still open, but the context only contains 4 open tasks with no information about total task count or completed tasks. The reasoning references 'summarise_tasks confirmed 8 total tasks with 1 done' which is not supported by the provided context data.",
+        "The answer claims 8 total tasks and 1 completed task, but the context data contains no information about total task count or completed tasks \u2014 these figures are fabricated. The reasoning references 'summarise_tasks confirmed 8 total tasks with 1 done' which contradicts the provided context data that only lists 4 open tasks."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 44978,
+      "answer": "Across all 8 tasks (1 done, 7 still open), there are 4 tasks"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 9,
+      "revisions": 2,
+      "correct": true,
+      "rejections": [
+        "The summary claims '8 total tasks (7 still open)' but the context only provides data for 4 tasks with no information about total task counts beyond what is listed.",
+        "The answer claims 8 total tasks in the system, but the context only provides data on 4 open tasks due or overdue with no information about total task count. The answer states 1 task is complete, but the context contains no information about completed tasks. The answer mentions 1 medium-priority task, but none of the 4 tasks in the context have medium priority (priorities are: null, high, high, low). The answer claims '6 to-do, 1 in-progress' among 7 open tasks, but the context only shows 3 to-do and 1 in-progress among the listed tasks, with no basis for the broader counts."
+      ],
+      "errors": [
+        "worker crashed: InputRejected: feedback is too long (580 chars, limit 500).",
+        "accepted the worker's rule based fallback after one retry"
+      ],
+      "elapsed_ms": 40448,
+      "answer": "4 open task(s) due in the next 7 days, 1 overdue. Most urgen"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 9299,
+      "answer": "high"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 13302,
+      "answer": "high"
+    }
+  ]
+}

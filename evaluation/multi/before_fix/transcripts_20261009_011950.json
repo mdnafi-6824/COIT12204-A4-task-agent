@@ -1,0 +1,2931 @@
+[
+  {
+    "id": "5e7a063a",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 2
+    },
+    "messages": [
+      {
+        "message_id": "e469e9c8df",
+        "conversation_id": "5e7a063a",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:27.085+00:00"
+      },
+      {
+        "message_id": "02cedf6aed",
+        "conversation_id": "5e7a063a",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 2,
+            "title": "Renew campus WiFi certificate",
+            "description": "Cert expires soon, staff will lose access if missed.",
+            "priority": "high",
+            "due_date": "2026-10-11",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 652,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e469e9c8df",
+        "sent_at": "2026-10-08T14:18:27.741+00:00"
+      },
+      {
+        "message_id": "192603167e",
+        "conversation_id": "5e7a063a",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "02cedf6aed",
+        "sent_at": "2026-10-08T14:18:27.742+00:00"
+      },
+      {
+        "message_id": "e2499c4ddd",
+        "conversation_id": "5e7a063a",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:27.743+00:00"
+      },
+      {
+        "message_id": "8fa67f1737",
+        "conversation_id": "5e7a063a",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 2,
+            "title": "Renew campus WiFi certificate",
+            "description": "Cert expires soon, staff will lose access if missed.",
+            "priority": "high",
+            "due_date": "2026-10-11",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 390,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e2499c4ddd",
+        "sent_at": "2026-10-08T14:18:28.136+00:00"
+      },
+      {
+        "message_id": "07a1b65e6b",
+        "conversation_id": "5e7a063a",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed.",
+            "Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result."
+          ],
+          "feedback": "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed. Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "8fa67f1737",
+        "sent_at": "2026-10-08T14:18:31.955+00:00"
+      },
+      {
+        "message_id": "2e67fc6159",
+        "conversation_id": "5e7a063a",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed. Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:31.955+00:00"
+      },
+      {
+        "message_id": "dc124e2c81",
+        "conversation_id": "5e7a063a",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 2,
+            "title": "Renew campus WiFi certificate",
+            "description": "Cert expires soon, staff will lose access if missed.",
+            "priority": "high",
+            "due_date": "2026-10-11",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 374,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "2e67fc6159",
+        "sent_at": "2026-10-08T14:18:32.333+00:00"
+      },
+      {
+        "message_id": "4ff19c44c3",
+        "conversation_id": "5e7a063a",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed.",
+            "Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result."
+          ],
+          "feedback": "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed. Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "dc124e2c81",
+        "sent_at": "2026-10-08T14:18:35.713+00:00"
+      },
+      {
+        "message_id": "7597dd4f50",
+        "conversation_id": "5e7a063a",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:35.714+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 2,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:18:27+00:00",
+    "elapsed_ms": 8628
+  },
+  {
+    "id": "c2edfdd7",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 7
+    },
+    "messages": [
+      {
+        "message_id": "350bf8b6bb",
+        "conversation_id": "c2edfdd7",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:35.718+00:00"
+      },
+      {
+        "message_id": "6103017cbb",
+        "conversation_id": "c2edfdd7",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 7,
+            "title": "Archive 2024 enrolment records",
+            "description": "Move old records to cold storage. Nobody is waiting on this.",
+            "priority": "low",
+            "due_date": "2026-11-03",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 301,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "350bf8b6bb",
+        "sent_at": "2026-10-08T14:18:36.022+00:00"
+      },
+      {
+        "message_id": "8a860724ea",
+        "conversation_id": "c2edfdd7",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "6103017cbb",
+        "sent_at": "2026-10-08T14:18:36.023+00:00"
+      },
+      {
+        "message_id": "c8387ac027",
+        "conversation_id": "c2edfdd7",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:36.023+00:00"
+      },
+      {
+        "message_id": "945100f3d1",
+        "conversation_id": "c2edfdd7",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 7,
+            "title": "Archive 2024 enrolment records",
+            "description": "Move old records to cold storage. Nobody is waiting on this.",
+            "priority": "low",
+            "due_date": "2026-11-03",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 504,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "c8387ac027",
+        "sent_at": "2026-10-08T14:18:36.530+00:00"
+      },
+      {
+        "message_id": "dd0dac9540",
+        "conversation_id": "c2edfdd7",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is a technical error message about an authentication failure, not a valid classification rationale.",
+            "Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis."
+          ],
+          "feedback": "The reasoning is a technical error message about an authentication failure, not a valid classification rationale. Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "945100f3d1",
+        "sent_at": "2026-10-08T14:18:40.421+00:00"
+      },
+      {
+        "message_id": "08d00196db",
+        "conversation_id": "c2edfdd7",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The reasoning is a technical error message about an authentication failure, not a valid classification rationale. Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:40.421+00:00"
+      },
+      {
+        "message_id": "9d631ace30",
+        "conversation_id": "c2edfdd7",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 7,
+            "title": "Archive 2024 enrolment records",
+            "description": "Move old records to cold storage. Nobody is waiting on this.",
+            "priority": "low",
+            "due_date": "2026-11-03",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 306,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "08d00196db",
+        "sent_at": "2026-10-08T14:18:40.731+00:00"
+      },
+      {
+        "message_id": "c39399cbd3",
+        "conversation_id": "c2edfdd7",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is a technical error message about an authentication failure, not a valid classification rationale.",
+            "Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis."
+          ],
+          "feedback": "The reasoning is a technical error message about an authentication failure, not a valid classification rationale. Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "9d631ace30",
+        "sent_at": "2026-10-08T14:18:43.902+00:00"
+      },
+      {
+        "message_id": "ae1dee60ef",
+        "conversation_id": "c2edfdd7",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:43.902+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 7,
+      "priority": "low",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:18:35+00:00",
+    "elapsed_ms": 8185
+  },
+  {
+    "id": "8ae290c2",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 4
+    },
+    "messages": [
+      {
+        "message_id": "dac122addd",
+        "conversation_id": "8ae290c2",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:43.904+00:00"
+      },
+      {
+        "message_id": "59537a0229",
+        "conversation_id": "8ae290c2",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 4,
+            "title": "Order new iPads for assessment lab",
+            "description": "Get three quotes and send purchase request to finance.",
+            "priority": null,
+            "due_date": "2026-10-19",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 407,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "dac122addd",
+        "sent_at": "2026-10-08T14:18:44.315+00:00"
+      },
+      {
+        "message_id": "4e1a32004b",
+        "conversation_id": "8ae290c2",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "59537a0229",
+        "sent_at": "2026-10-08T14:18:44.316+00:00"
+      },
+      {
+        "message_id": "01349342f9",
+        "conversation_id": "8ae290c2",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:44.317+00:00"
+      },
+      {
+        "message_id": "1a5cc53e39",
+        "conversation_id": "8ae290c2",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 4,
+            "title": "Order new iPads for assessment lab",
+            "description": "Get three quotes and send purchase request to finance.",
+            "priority": null,
+            "due_date": "2026-10-19",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 277,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "01349342f9",
+        "sent_at": "2026-10-08T14:18:44.598+00:00"
+      },
+      {
+        "message_id": "60f7326ff1",
+        "conversation_id": "8ae290c2",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the classification unreliable.",
+            "Confidence of 0.3 indicates the answer is not trustworthy enough to act on."
+          ],
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the classification unreliable. Confidence of 0.3 indicates the answer is not trustworthy enough to act on.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "1a5cc53e39",
+        "sent_at": "2026-10-08T14:18:48.204+00:00"
+      },
+      {
+        "message_id": "71d93b685c",
+        "conversation_id": "8ae290c2",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the classification unreliable. Confidence of 0.3 indicates the answer is not trustworthy enough to act on."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:48.205+00:00"
+      },
+      {
+        "message_id": "99081d9fcd",
+        "conversation_id": "8ae290c2",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 4,
+            "title": "Order new iPads for assessment lab",
+            "description": "Get three quotes and send purchase request to finance.",
+            "priority": null,
+            "due_date": "2026-10-19",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 408,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "71d93b685c",
+        "sent_at": "2026-10-08T14:18:48.619+00:00"
+      },
+      {
+        "message_id": "d8a38ba32f",
+        "conversation_id": "8ae290c2",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the priority classification unreliable.",
+            "Confidence of 0.3 indicates the answer is not trustworthy enough to act on."
+          ],
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the priority classification unreliable. Confidence of 0.3 indicates the answer is not trustworthy enough to act on.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "99081d9fcd",
+        "sent_at": "2026-10-08T14:18:52.403+00:00"
+      },
+      {
+        "message_id": "d8bd039fb4",
+        "conversation_id": "8ae290c2",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:52.404+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 4,
+      "priority": "medium",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:18:43+00:00",
+    "elapsed_ms": 8499
+  },
+  {
+    "id": "fe66b0b8",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "e9b7168370",
+        "conversation_id": "fe66b0b8",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:52.407+00:00"
+      },
+      {
+        "message_id": "e81794fbde",
+        "conversation_id": "fe66b0b8",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 300,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e9b7168370",
+        "sent_at": "2026-10-08T14:18:52.712+00:00"
+      },
+      {
+        "message_id": "289e12e248",
+        "conversation_id": "fe66b0b8",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e81794fbde",
+        "sent_at": "2026-10-08T14:18:52.713+00:00"
+      },
+      {
+        "message_id": "d5a6a2c6a9",
+        "conversation_id": "fe66b0b8",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:52.713+00:00"
+      },
+      {
+        "message_id": "f725e6dbbf",
+        "conversation_id": "fe66b0b8",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 404,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "d5a6a2c6a9",
+        "sent_at": "2026-10-08T14:18:53.122+00:00"
+      },
+      {
+        "message_id": "7795c8bc35",
+        "conversation_id": "fe66b0b8",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data.",
+            "Confidence of 0.3 indicates the classification is unreliable and should not be accepted.",
+            "The due date 2026-10-07 is in the past relative to today (2026-10-09), making this task overdue, which is not acknowledged anywhere in the answer."
+          ],
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data. Confidence of 0.3 indicates the classification is unreliable and should not be accepted. The due date 2026-10-07 is in the past relative to today (2026-10-09), making this task overdue, which is not acknowledged anywhere in the answer.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "f725e6dbbf",
+        "sent_at": "2026-10-08T14:18:58.238+00:00"
+      },
+      {
+        "message_id": "e8d96f480d",
+        "conversation_id": "fe66b0b8",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data. Confidence of 0.3 indicates the classification is unreliable and should not be accepted. The due date 2026-10-07 is in the past relative to today (2026-10-09), making this task overdue, which is not acknowledged anywhere in the answer."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:18:58.239+00:00"
+      },
+      {
+        "message_id": "b824a43d1d",
+        "conversation_id": "fe66b0b8",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 306,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e8d96f480d",
+        "sent_at": "2026-10-08T14:18:58.548+00:00"
+      },
+      {
+        "message_id": "3643799925",
+        "conversation_id": "fe66b0b8",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data.",
+            "Confidence of 0.3 is too low to be considered a reliable or useful classification.",
+            "The due date 2026-10-07 is in the past relative to today (2026-10-09), making this an overdue task that should be flagged, but the answer provides no summary or acknowledgment of this."
+          ],
+          "feedback": "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data. Confidence of 0.3 is too low to be considered a reliable or useful classification. The due date 2026-10-07 is in the past relative to today (2026-10-09), making this an overdue task that should be flagged, but the answer provides no summary or acknowledgment of this.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "b824a43d1d",
+        "sent_at": "2026-10-08T14:19:04.702+00:00"
+      },
+      {
+        "message_id": "8db1698e58",
+        "conversation_id": "fe66b0b8",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:04.702+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 5,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:18:52+00:00",
+    "elapsed_ms": 12295
+  },
+  {
+    "id": "86605e63",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "9c6c97fa06",
+        "conversation_id": "86605e63",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:04.706+00:00"
+      },
+      {
+        "message_id": "291518435b",
+        "conversation_id": "86605e63",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 290,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "9c6c97fa06",
+        "sent_at": "2026-10-08T14:19:04.999+00:00"
+      },
+      {
+        "message_id": "e8bc54aa06",
+        "conversation_id": "86605e63",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "291518435b",
+        "sent_at": "2026-10-08T14:19:05.000+00:00"
+      },
+      {
+        "message_id": "3b0be9b91a",
+        "conversation_id": "86605e63",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "previous_result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:05.000+00:00"
+      },
+      {
+        "message_id": "b55b3133a4",
+        "conversation_id": "86605e63",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 417,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "3b0be9b91a",
+        "sent_at": "2026-10-08T14:19:05.421+00:00"
+      },
+      {
+        "message_id": "20fbd20be1",
+        "conversation_id": "86605e63",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this overdue status.",
+            "The reasoning is a fallback due to an API authentication error, not actual analysis of the task data, making the suggestion unreliable."
+          ],
+          "feedback": "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this overdue status. The reasoning is a fallback due to an API authentication error, not actual analysis of the task data, making the suggestion unreliable.",
+          "checked_by": "model",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "b55b3133a4",
+        "sent_at": "2026-10-08T14:19:13.517+00:00"
+      },
+      {
+        "message_id": "62bfc80c51",
+        "conversation_id": "86605e63",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "previous_result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this overdue status. The reasoning is a fallback due to an API authentication error, not actual analysis of the task data, making the suggestion unreliable."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:13.517+00:00"
+      },
+      {
+        "message_id": "9c62e74a90",
+        "conversation_id": "86605e63",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 388,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "62bfc80c51",
+        "sent_at": "2026-10-08T14:19:13.908+00:00"
+      },
+      {
+        "message_id": "64eae4ab11",
+        "conversation_id": "86605e63",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this.",
+            "The reasoning is a fallback due to an API authentication error, not a real analysis of the task data."
+          ],
+          "feedback": "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this. The reasoning is a fallback due to an API authentication error, not a real analysis of the task data.",
+          "checked_by": "model",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "9c62e74a90",
+        "sent_at": "2026-10-08T14:19:21.343+00:00"
+      },
+      {
+        "message_id": "f3c5428a77",
+        "conversation_id": "86605e63",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-10",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:21.344+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 5,
+      "priority": null,
+      "suggested_due_date": "2026-10-10",
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:19:04+00:00",
+    "elapsed_ms": 16637
+  },
+  {
+    "id": "e4919c9f",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 6
+    },
+    "messages": [
+      {
+        "message_id": "4844d0f1a9",
+        "conversation_id": "e4919c9f",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:21.348+00:00"
+      },
+      {
+        "message_id": "7242cacf4e",
+        "conversation_id": "e4919c9f",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 6,
+            "title": "Draft newsletter for October intake",
+            "description": "Marketing wants a draft by mid month, no firm date yet.",
+            "priority": "medium",
+            "due_date": null,
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 341,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "4844d0f1a9",
+        "sent_at": "2026-10-08T14:19:21.691+00:00"
+      },
+      {
+        "message_id": "16772d9067",
+        "conversation_id": "e4919c9f",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "7242cacf4e",
+        "sent_at": "2026-10-08T14:19:21.692+00:00"
+      },
+      {
+        "message_id": "d0515ed6fc",
+        "conversation_id": "e4919c9f",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "previous_result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:21.692+00:00"
+      },
+      {
+        "message_id": "6d3f7fe02b",
+        "conversation_id": "e4919c9f",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 6,
+            "title": "Draft newsletter for October intake",
+            "description": "Marketing wants a draft by mid month, no firm date yet.",
+            "priority": "medium",
+            "due_date": null,
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 292,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "d0515ed6fc",
+        "sent_at": "2026-10-08T14:19:21.987+00:00"
+      },
+      {
+        "message_id": "33b33782ba",
+        "conversation_id": "e4919c9f",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning reveals the suggestion was produced by a fallback rule after an authentication error, not by actual analysis of the task data.",
+            "The priority field is None instead of reflecting the task's actual priority of 'medium'.",
+            "The summary field is None, providing no useful information to the user.",
+            "Confidence of 0.3 indicates the answer is unreliable and should not be surfaced as a valid suggestion."
+          ],
+          "feedback": "The reasoning reveals the suggestion was produced by a fallback rule after an authentication error, not by actual analysis of the task data. The priority field is None instead of reflecting the task's actual priority of 'medium'. The summary field is None, providing no useful information to the user. Confidence of 0.3 indicates the answer is unreliable and should not be surfaced as a valid suggestion.",
+          "checked_by": "model",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "6d3f7fe02b",
+        "sent_at": "2026-10-08T14:19:26.875+00:00"
+      },
+      {
+        "message_id": "b4415fb7e9",
+        "conversation_id": "e4919c9f",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "previous_result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The reasoning reveals the suggestion was produced by a fallback rule after an authentication error, not by actual analysis of the task data. The priority field is None instead of reflecting the task's actual priority of 'medium'. The summary field is None, providing no useful information to the user. Confidence of 0.3 indicates the answer is unreliable and should not be surfaced as a valid suggestion."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:26.876+00:00"
+      },
+      {
+        "message_id": "528b24926c",
+        "conversation_id": "e4919c9f",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": {
+            "id": 6,
+            "title": "Draft newsletter for October intake",
+            "description": "Marketing wants a draft by mid month, no firm date yet.",
+            "priority": "medium",
+            "due_date": null,
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 293,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "b4415fb7e9",
+        "sent_at": "2026-10-08T14:19:27.173+00:00"
+      },
+      {
+        "message_id": "1b6215153f",
+        "conversation_id": "e4919c9f",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The reasoning cites an authentication error and fallback rule rather than genuine analysis of the task data.",
+            "The priority field is None instead of 'medium' as specified in the task data.",
+            "The summary field is None, providing no useful explanation to the user.",
+            "Confidence of 0.3 indicates the answer is unreliable and should not be surfaced to the user."
+          ],
+          "feedback": "The reasoning cites an authentication error and fallback rule rather than genuine analysis of the task data. The priority field is None instead of 'medium' as specified in the task data. The summary field is None, providing no useful explanation to the user. Confidence of 0.3 indicates the answer is unreliable and should not be surfaced to the user.",
+          "checked_by": "model",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "528b24926c",
+        "sent_at": "2026-10-08T14:19:32.036+00:00"
+      },
+      {
+        "message_id": "dff00a00e3",
+        "conversation_id": "e4919c9f",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-16",
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:32.036+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 6,
+      "priority": null,
+      "suggested_due_date": "2026-10-16",
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:19:21+00:00",
+    "elapsed_ms": 10688
+  },
+  {
+    "id": "86e71d96",
+    "request": {
+      "action": "weekly_summary",
+      "days_ahead": 7
+    },
+    "messages": [
+      {
+        "message_id": "694b39c299",
+        "conversation_id": "86e71d96",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:32.040+00:00"
+      },
+      {
+        "message_id": "f17db5f065",
+        "conversation_id": "86e71d96",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 505,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "694b39c299",
+        "sent_at": "2026-10-08T14:19:32.547+00:00"
+      },
+      {
+        "message_id": "c33a09fe4f",
+        "conversation_id": "86e71d96",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "f17db5f065",
+        "sent_at": "2026-10-08T14:19:32.548+00:00"
+      },
+      {
+        "message_id": "cd3a5d5e58",
+        "conversation_id": "86e71d96",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "previous_result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:32.548+00:00"
+      },
+      {
+        "message_id": "d5b3b609f9",
+        "conversation_id": "86e71d96",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 301,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "cd3a5d5e58",
+        "sent_at": "2026-10-08T14:19:32.851+00:00"
+      },
+      {
+        "message_id": "6691f47cac",
+        "conversation_id": "86e71d96",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth.",
+            "The answer claims 1 overdue task and 4 tasks due in the next 7 days, but with no task data supplied these figures are unverifiable and may be fabricated.",
+            "The reasoning admits the model step failed due to an authentication error, meaning the output is a fallback with low confidence (0.5) and cannot be trusted as accurate."
+          ],
+          "feedback": "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth. The answer claims 1 overdue task and 4 tasks due in the next 7 days, but with no task data supplied these figures are unverifiable and may be fabricated. The reasoning admits the model step failed due to an authentication error, meaning the output is a fallback with low confidence (0.5) and cannot be trusted as accurate.",
+          "checked_by": "model",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "d5b3b609f9",
+        "sent_at": "2026-10-08T14:19:37.850+00:00"
+      },
+      {
+        "message_id": "32269c0aaf",
+        "conversation_id": "86e71d96",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "previous_result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "feedback": "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth. The answer claims 1 overdue task and 4 tasks due in the next 7 days, but with no task data supplied these figures are unverifiable and may be fabricated. The reasoning admits the model step failed due to an authentication error, meaning the output is a fallback with low confidence (0.5) and cannot be trusted as accurate."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:37.851+00:00"
+      },
+      {
+        "message_id": "bb204fff40",
+        "conversation_id": "86e71d96",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 325,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "32269c0aaf",
+        "sent_at": "2026-10-08T14:19:38.180+00:00"
+      },
+      {
+        "message_id": "a61c2aac0d",
+        "conversation_id": "86e71d96",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth.",
+            "The answer claims 1 overdue task and lists 4 specific tasks, but with no task data available there is no way to confirm these figures or task names are accurate.",
+            "Confidence is 0.5 and the reasoning admits a model failure, meaning the output is unreliable and potentially fabricated."
+          ],
+          "feedback": "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth. The answer claims 1 overdue task and lists 4 specific tasks, but with no task data available there is no way to confirm these figures or task names are accurate. Confidence is 0.5 and the reasoning admits a model failure, meaning the output is unreliable and potentially fabricated.",
+          "checked_by": "model",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "bb204fff40",
+        "sent_at": "2026-10-08T14:19:43.296+00:00"
+      },
+      {
+        "message_id": "e24d3358a3",
+        "conversation_id": "86e71d96",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.5
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:43.297+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "weekly_summary",
+      "task_id": null,
+      "priority": null,
+      "suggested_due_date": null,
+      "summary": "4 open task(s) due in the next 7 days, 1 overdue. Most urgent: Fix login bug on student portal, Submit COIT12204 Assessment 3, Renew campus WiFi certificate, Weekly team stand-up notes.",
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.5
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:19:32+00:00",
+    "elapsed_ms": 11257
+  },
+  {
+    "id": "35dcb22f",
+    "request": {
+      "action": "classify_priority",
+      "title": "Server room aircon failed",
+      "description": "Temperature rising, servers will overheat within hours"
+    },
+    "messages": [
+      {
+        "message_id": "4a9632dedc",
+        "conversation_id": "35dcb22f",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:43.302+00:00"
+      },
+      {
+        "message_id": "f532261142",
+        "conversation_id": "35dcb22f",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 402,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "4a9632dedc",
+        "sent_at": "2026-10-08T14:19:43.708+00:00"
+      },
+      {
+        "message_id": "8ae6caa328",
+        "conversation_id": "35dcb22f",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+          ],
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+          "checked_by": "rules",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "f532261142",
+        "sent_at": "2026-10-08T14:19:43.708+00:00"
+      },
+      {
+        "message_id": "5b9c1e6d90",
+        "conversation_id": "35dcb22f",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "The answer came from the worker's fallback rules, not the model. Try again and use the task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:43.709+00:00"
+      },
+      {
+        "message_id": "ad7daaf6b1",
+        "conversation_id": "35dcb22f",
+        "step": 4,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 301,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "5b9c1e6d90",
+        "sent_at": "2026-10-08T14:19:44.014+00:00"
+      },
+      {
+        "message_id": "3f62ec86fe",
+        "conversation_id": "35dcb22f",
+        "step": 5,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "Task data is None, so there is no basis for any priority classification.",
+            "A fallback 'medium' priority was assigned without any task information to support it.",
+            "The answer is not useful because it provides no actionable classification given the absence of task data."
+          ],
+          "feedback": "Task data is None, so there is no basis for any priority classification. A fallback 'medium' priority was assigned without any task information to support it. The answer is not useful because it provides no actionable classification given the absence of task data.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "ad7daaf6b1",
+        "sent_at": "2026-10-08T14:19:46.891+00:00"
+      },
+      {
+        "message_id": "fef8c17840",
+        "conversation_id": "35dcb22f",
+        "step": 6,
+        "sender": "orchestrator",
+        "receiver": "worker",
+        "intent": "revise_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "previous_result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "feedback": "Task data is None, so there is no basis for any priority classification. A fallback 'medium' priority was assigned without any task information to support it. The answer is not useful because it provides no actionable classification given the absence of task data."
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:46.891+00:00"
+      },
+      {
+        "message_id": "f325d00f68",
+        "conversation_id": "35dcb22f",
+        "step": 7,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "task": null,
+          "fallback_used": true,
+          "warnings": [],
+          "tools_called": [],
+          "llm_calls": 0,
+          "latency_ms": 298,
+          "revision": true
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "fef8c17840",
+        "sent_at": "2026-10-08T14:19:47.192+00:00"
+      },
+      {
+        "message_id": "8ddd8fd11a",
+        "conversation_id": "35dcb22f",
+        "step": 8,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "revision_requested",
+        "content": {
+          "issues": [
+            "Task data is None, so there is no basis for any priority classification.",
+            "A fallback 'medium' priority was assigned without any task information to support it.",
+            "The answer is not useful because it provides no actionable classification given the absence of task data."
+          ],
+          "feedback": "Task data is None, so there is no basis for any priority classification. A fallback 'medium' priority was assigned without any task information to support it. The answer is not useful because it provides no actionable classification given the absence of task data.",
+          "checked_by": "model",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "f325d00f68",
+        "sent_at": "2026-10-08T14:19:50.098+00:00"
+      },
+      {
+        "message_id": "45bc54449e",
+        "conversation_id": "35dcb22f",
+        "step": 9,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "max_revisions",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+            "confidence": 0.3
+          },
+          "revisions": 2,
+          "errors": [
+            "max revisions (2) reached, returning last result"
+          ]
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:19:50.099+00:00"
+      }
+    ],
+    "steps": 9,
+    "revisions": 2,
+    "status": "max_revisions",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": null,
+      "priority": "medium",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Fallback rule used because the model step failed (AnthropicAuthenticationError: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'API key is invalid.'}, 'request_id': None}).",
+      "confidence": 0.3
+    },
+    "errors": [
+      "max revisions (2) reached, returning last result"
+    ],
+    "started_at": "2026-10-08T14:19:43+00:00",
+    "elapsed_ms": 6797
+  }
+]

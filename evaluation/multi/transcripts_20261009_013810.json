@@ -1,0 +1,2346 @@
+[
+  {
+    "id": "59460d2d",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 2
+    },
+    "messages": [
+      {
+        "message_id": "dc870f2354",
+        "conversation_id": "59460d2d",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:35:35.487+00:00"
+      },
+      {
+        "message_id": "32d3868484",
+        "conversation_id": "59460d2d",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority tier.",
+            "confidence": 0.98
+          },
+          "task": {
+            "id": 2,
+            "title": "Renew campus WiFi certificate",
+            "description": "Cert expires soon, staff will lose access if missed.",
+            "priority": "high",
+            "due_date": "2026-10-11",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 16240,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "dc870f2354",
+        "sent_at": "2026-10-08T14:35:51.729+00:00"
+      },
+      {
+        "message_id": "f63a75f30f",
+        "conversation_id": "59460d2d",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority tier.",
+            "confidence": 0.98
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "32d3868484",
+        "sent_at": "2026-10-08T14:35:53.344+00:00"
+      },
+      {
+        "message_id": "61ee7a3e51",
+        "conversation_id": "59460d2d",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority tier.",
+            "confidence": 0.98
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:35:53.344+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 2,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority tier.",
+      "confidence": 0.98
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:35:35+00:00",
+    "elapsed_ms": 17857
+  },
+  {
+    "id": "2f358e76",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 2
+    },
+    "messages": [
+      {
+        "message_id": "6038b2f642",
+        "conversation_id": "2f358e76",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:35:53.347+00:00"
+      },
+      {
+        "message_id": "96735e83f5",
+        "conversation_id": "2f358e76",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 2
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority category.",
+            "confidence": 0.98
+          },
+          "task": {
+            "id": 2,
+            "title": "Renew campus WiFi certificate",
+            "description": "Cert expires soon, staff will lose access if missed.",
+            "priority": "high",
+            "due_date": "2026-10-11",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 14954,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "6038b2f642",
+        "sent_at": "2026-10-08T14:36:08.309+00:00"
+      },
+      {
+        "message_id": "49842612af",
+        "conversation_id": "2f358e76",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority category.",
+            "confidence": 0.98
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "96735e83f5",
+        "sent_at": "2026-10-08T14:36:09.879+00:00"
+      },
+      {
+        "message_id": "f11533863e",
+        "conversation_id": "2f358e76",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 2,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority category.",
+            "confidence": 0.98
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:09.880+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 2,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 2 ('Renew campus WiFi certificate') is due on 2026-10-11, which is only 2 days away, and missing it would block staff access to WiFi \u2014 both criteria (due within 3 days and blocking other people) firmly place it in the high priority category.",
+      "confidence": 0.98
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:35:53+00:00",
+    "elapsed_ms": 16533
+  },
+  {
+    "id": "7bde12c0",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 7
+    },
+    "messages": [
+      {
+        "message_id": "64a32c46e1",
+        "conversation_id": "7bde12c0",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:09.883+00:00"
+      },
+      {
+        "message_id": "8227019aaf",
+        "conversation_id": "7bde12c0",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "task": {
+            "id": 7,
+            "title": "Archive 2024 enrolment records",
+            "description": "Move old records to cold storage. Nobody is waiting on this.",
+            "priority": "low",
+            "due_date": "2026-11-03",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 5920,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "64a32c46e1",
+        "sent_at": "2026-10-08T14:36:15.805+00:00"
+      },
+      {
+        "message_id": "dfdbda17ec",
+        "conversation_id": "7bde12c0",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "8227019aaf",
+        "sent_at": "2026-10-08T14:36:17.435+00:00"
+      },
+      {
+        "message_id": "77138a49cf",
+        "conversation_id": "7bde12c0",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:17.436+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 7,
+      "priority": "low",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+      "confidence": 0.97
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:09+00:00",
+    "elapsed_ms": 7552
+  },
+  {
+    "id": "7cb28578",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 7
+    },
+    "messages": [
+      {
+        "message_id": "0c0be719b8",
+        "conversation_id": "7cb28578",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:17.438+00:00"
+      },
+      {
+        "message_id": "8aad38ce24",
+        "conversation_id": "7cb28578",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 7
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "task": {
+            "id": 7,
+            "title": "Archive 2024 enrolment records",
+            "description": "Move old records to cold storage. Nobody is waiting on this.",
+            "priority": "low",
+            "due_date": "2026-11-03",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 5941,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "0c0be719b8",
+        "sent_at": "2026-10-08T14:36:23.381+00:00"
+      },
+      {
+        "message_id": "a8e99ed6ad",
+        "conversation_id": "7cb28578",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "8aad38ce24",
+        "sent_at": "2026-10-08T14:36:24.803+00:00"
+      },
+      {
+        "message_id": "94975b9fa8",
+        "conversation_id": "7cb28578",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 7,
+            "priority": "low",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+            "confidence": 0.97
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:24.803+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 7,
+      "priority": "low",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 7 is due in 25 days (2026-11-03), well outside the 14-day medium threshold, and the description explicitly states nobody is waiting on it \u2014 making this a clear low-priority housekeeping task.",
+      "confidence": 0.97
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:17+00:00",
+    "elapsed_ms": 7365
+  },
+  {
+    "id": "cb4d62cf",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 4
+    },
+    "messages": [
+      {
+        "message_id": "c51d17fd90",
+        "conversation_id": "cb4d62cf",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:24.806+00:00"
+      },
+      {
+        "message_id": "060b4fd58e",
+        "conversation_id": "cb4d62cf",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely in the 4\u201314 day medium-priority window. It is not overdue and there is no indication it is blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "task": {
+            "id": 4,
+            "title": "Order new iPads for assessment lab",
+            "description": "Get three quotes and send purchase request to finance.",
+            "priority": null,
+            "due_date": "2026-10-19",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 5743,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "c51d17fd90",
+        "sent_at": "2026-10-08T14:36:30.552+00:00"
+      },
+      {
+        "message_id": "c053671326",
+        "conversation_id": "cb4d62cf",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely in the 4\u201314 day medium-priority window. It is not overdue and there is no indication it is blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "060b4fd58e",
+        "sent_at": "2026-10-08T14:36:32.175+00:00"
+      },
+      {
+        "message_id": "fd1d72cad8",
+        "conversation_id": "cb4d62cf",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely in the 4\u201314 day medium-priority window. It is not overdue and there is no indication it is blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:32.175+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 4,
+      "priority": "medium",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely in the 4\u201314 day medium-priority window. It is not overdue and there is no indication it is blocking other people or systems.",
+      "confidence": 0.95
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:24+00:00",
+    "elapsed_ms": 7369
+  },
+  {
+    "id": "45f30e77",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 4
+    },
+    "messages": [
+      {
+        "message_id": "9b0623e853",
+        "conversation_id": "45f30e77",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:32.178+00:00"
+      },
+      {
+        "message_id": "3abd39db37",
+        "conversation_id": "45f30e77",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 4
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely within the 4\u201314 day medium-priority window. There is no indication it is overdue or blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "task": {
+            "id": 4,
+            "title": "Order new iPads for assessment lab",
+            "description": "Get three quotes and send purchase request to finance.",
+            "priority": null,
+            "due_date": "2026-10-19",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 6351,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "9b0623e853",
+        "sent_at": "2026-10-08T14:36:38.532+00:00"
+      },
+      {
+        "message_id": "e9ab35a8be",
+        "conversation_id": "45f30e77",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely within the 4\u201314 day medium-priority window. There is no indication it is overdue or blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "3abd39db37",
+        "sent_at": "2026-10-08T14:36:39.864+00:00"
+      },
+      {
+        "message_id": "42d6ddc099",
+        "conversation_id": "45f30e77",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 4,
+            "priority": "medium",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely within the 4\u201314 day medium-priority window. There is no indication it is overdue or blocking other people or systems.",
+            "confidence": 0.95
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:39.866+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 4,
+      "priority": "medium",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "Task 4 ('Order new iPads for assessment lab') is due on 2026-10-19, which is 10 days away \u2014 squarely within the 4\u201314 day medium-priority window. There is no indication it is overdue or blocking other people or systems.",
+      "confidence": 0.95
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:32+00:00",
+    "elapsed_ms": 7687
+  },
+  {
+    "id": "0e264b12",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "601880f9ac",
+        "conversation_id": "0e264b12",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:39.870+00:00"
+      },
+      {
+        "message_id": "368202f16f",
+        "conversation_id": "0e264b12",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 4809,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "601880f9ac",
+        "sent_at": "2026-10-08T14:36:44.680+00:00"
+      },
+      {
+        "message_id": "8443fdf4ef",
+        "conversation_id": "0e264b12",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "368202f16f",
+        "sent_at": "2026-10-08T14:36:45.925+00:00"
+      },
+      {
+        "message_id": "92a045ee2c",
+        "conversation_id": "0e264b12",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:45.925+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 5,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+      "confidence": 0.97
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:39+00:00",
+    "elapsed_ms": 6056
+  },
+  {
+    "id": "d47fa307",
+    "request": {
+      "action": "classify_priority",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "e057d6751c",
+        "conversation_id": "d47fa307",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:45.928+00:00"
+      },
+      {
+        "message_id": "c95ffd9185",
+        "conversation_id": "d47fa307",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "task_id": 5
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 4939,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e057d6751c",
+        "sent_at": "2026-10-08T14:36:50.870+00:00"
+      },
+      {
+        "message_id": "a04180a366",
+        "conversation_id": "d47fa307",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "c95ffd9185",
+        "sent_at": "2026-10-08T14:36:52.252+00:00"
+      },
+      {
+        "message_id": "8cd14aa163",
+        "conversation_id": "d47fa307",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": 5,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+            "confidence": 0.97
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:52.252+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": 5,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "The task is overdue by 2 days (due 2026-10-07) and involves a live login bug blocking users from accessing the student portal, both of which meet the high-priority criteria.",
+      "confidence": 0.97
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:45+00:00",
+    "elapsed_ms": 6324
+  },
+  {
+    "id": "1de6363e",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "19d332e657",
+        "conversation_id": "1de6363e",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:52.255+00:00"
+      },
+      {
+        "message_id": "07f1b41149",
+        "conversation_id": "1de6363e",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it involves a live login bug affecting users, so the earliest realistic due date is today (2026-10-09) to prompt immediate action.",
+            "confidence": 0.92
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 6148,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "19d332e657",
+        "sent_at": "2026-10-08T14:36:58.406+00:00"
+      },
+      {
+        "message_id": "3701b127b5",
+        "conversation_id": "1de6363e",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it involves a live login bug affecting users, so the earliest realistic due date is today (2026-10-09) to prompt immediate action.",
+            "confidence": 0.92
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "07f1b41149",
+        "sent_at": "2026-10-08T14:36:59.772+00:00"
+      },
+      {
+        "message_id": "cd7ec0dc3e",
+        "conversation_id": "1de6363e",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it involves a live login bug affecting users, so the earliest realistic due date is today (2026-10-09) to prompt immediate action.",
+            "confidence": 0.92
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:59.772+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 5,
+      "priority": null,
+      "suggested_due_date": "2026-10-09",
+      "summary": null,
+      "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it involves a live login bug affecting users, so the earliest realistic due date is today (2026-10-09) to prompt immediate action.",
+      "confidence": 0.92
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:52+00:00",
+    "elapsed_ms": 7517
+  },
+  {
+    "id": "a3332279",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 5
+    },
+    "messages": [
+      {
+        "message_id": "4124306551",
+        "conversation_id": "a3332279",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:36:59.775+00:00"
+      },
+      {
+        "message_id": "1e9f5f4a3b",
+        "conversation_id": "a3332279",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 5
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it's an active login bug affecting users, so the earliest realistic date is today (2026-10-09) to signal it needs immediate attention.",
+            "confidence": 0.92
+          },
+          "task": {
+            "id": 5,
+            "title": "Fix login bug on student portal",
+            "description": "Users report 500 error when password contains an ampersand.",
+            "priority": null,
+            "due_date": "2026-10-07",
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 5995,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "4124306551",
+        "sent_at": "2026-10-08T14:37:05.772+00:00"
+      },
+      {
+        "message_id": "de2cd21ee3",
+        "conversation_id": "a3332279",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it's an active login bug affecting users, so the earliest realistic date is today (2026-10-09) to signal it needs immediate attention.",
+            "confidence": 0.92
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "1e9f5f4a3b",
+        "sent_at": "2026-10-08T14:37:08.954+00:00"
+      },
+      {
+        "message_id": "4201431f77",
+        "conversation_id": "a3332279",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 5,
+            "priority": null,
+            "suggested_due_date": "2026-10-09",
+            "summary": null,
+            "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it's an active login bug affecting users, so the earliest realistic date is today (2026-10-09) to signal it needs immediate attention.",
+            "confidence": 0.92
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:08.954+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 5,
+      "priority": null,
+      "suggested_due_date": "2026-10-09",
+      "summary": null,
+      "reasoning": "The task was due 2026-10-07 and is already 2 days overdue; it's an active login bug affecting users, so the earliest realistic date is today (2026-10-09) to signal it needs immediate attention.",
+      "confidence": 0.92
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:36:59+00:00",
+    "elapsed_ms": 9179
+  },
+  {
+    "id": "ceb72d71",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 6
+    },
+    "messages": [
+      {
+        "message_id": "85073cc701",
+        "conversation_id": "ceb72d71",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:08.959+00:00"
+      },
+      {
+        "message_id": "8f48969eb5",
+        "conversation_id": "ceb72d71",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that informal deadline, is 6 days from today, and gives a realistic buffer to complete a newsletter draft.",
+            "confidence": 0.85
+          },
+          "task": {
+            "id": 6,
+            "title": "Draft newsletter for October intake",
+            "description": "Marketing wants a draft by mid month, no firm date yet.",
+            "priority": "medium",
+            "due_date": null,
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 6341,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "85073cc701",
+        "sent_at": "2026-10-08T14:37:15.302+00:00"
+      },
+      {
+        "message_id": "77d0d2b323",
+        "conversation_id": "ceb72d71",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that informal deadline, is 6 days from today, and gives a realistic buffer to complete a newsletter draft.",
+            "confidence": 0.85
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "8f48969eb5",
+        "sent_at": "2026-10-08T14:37:16.924+00:00"
+      },
+      {
+        "message_id": "aa96b79238",
+        "conversation_id": "ceb72d71",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": null,
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that informal deadline, is 6 days from today, and gives a realistic buffer to complete a newsletter draft.",
+            "confidence": 0.85
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:16.924+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 6,
+      "priority": null,
+      "suggested_due_date": "2026-10-15",
+      "summary": null,
+      "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that informal deadline, is 6 days from today, and gives a realistic buffer to complete a newsletter draft.",
+      "confidence": 0.85
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:08+00:00",
+    "elapsed_ms": 7965
+  },
+  {
+    "id": "19c91ff1",
+    "request": {
+      "action": "suggest_due_date",
+      "task_id": 6
+    },
+    "messages": [
+      {
+        "message_id": "52865ca72e",
+        "conversation_id": "19c91ff1",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:16.928+00:00"
+      },
+      {
+        "message_id": "24075adaa5",
+        "conversation_id": "19c91ff1",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "suggest_due_date",
+            "task_id": 6
+          },
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": "medium",
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that target, is 6 days from today, and gives enough buffer to complete a newsletter draft without being overdue.",
+            "confidence": 0.85
+          },
+          "task": {
+            "id": 6,
+            "title": "Draft newsletter for October intake",
+            "description": "Marketing wants a draft by mid month, no firm date yet.",
+            "priority": "medium",
+            "due_date": null,
+            "status": "todo",
+            "created_at": "2026-09-25"
+          },
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "lookup_task"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 6459,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "52865ca72e",
+        "sent_at": "2026-10-08T14:37:23.390+00:00"
+      },
+      {
+        "message_id": "05808e2a9c",
+        "conversation_id": "19c91ff1",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": "medium",
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that target, is 6 days from today, and gives enough buffer to complete a newsletter draft without being overdue.",
+            "confidence": 0.85
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "24075adaa5",
+        "sent_at": "2026-10-08T14:37:24.661+00:00"
+      },
+      {
+        "message_id": "606ba4dd7a",
+        "conversation_id": "19c91ff1",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "suggest_due_date",
+            "task_id": 6,
+            "priority": "medium",
+            "suggested_due_date": "2026-10-15",
+            "summary": null,
+            "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that target, is 6 days from today, and gives enough buffer to complete a newsletter draft without being overdue.",
+            "confidence": 0.85
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:24.662+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "suggest_due_date",
+      "task_id": 6,
+      "priority": "medium",
+      "suggested_due_date": "2026-10-15",
+      "summary": null,
+      "reasoning": "The task description states Marketing wants a draft by mid-October; 2026-10-15 aligns with that target, is 6 days from today, and gives enough buffer to complete a newsletter draft without being overdue.",
+      "confidence": 0.85
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:16+00:00",
+    "elapsed_ms": 7733
+  },
+  {
+    "id": "a6963e1f",
+    "request": {
+      "action": "weekly_summary",
+      "days_ahead": 7
+    },
+    "messages": [
+      {
+        "message_id": "f11770e7a6",
+        "conversation_id": "a6963e1f",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:24.666+00:00"
+      },
+      {
+        "message_id": "510e51fb73",
+        "conversation_id": "a6963e1f",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks. Here are the most urgent items:\n\n\ud83d\udd34 OVERDUE \u2014 Fix login bug on student portal (Task #5, was due 2026-10-07): A 500 error affecting users with ampersands in their passwords. Needs immediate attention.\n\n\ud83d\udd34 HIGH \u2014 Submit COIT12204 Assessment 3 (Task #1, due tomorrow 2026-10-10): Final report, code, and demo video via Moodle. Currently in progress \u2014 finish today.\n\n\ud83d\udd34 HIGH \u2014 Renew campus WiFi certificate (Task #2, due 2026-10-11): Certificate expiry will cut off staff access if missed. Due in 2 days.\n\n\ud83d\udfe1 LOW \u2014 Weekly team stand-up notes (Task #3, due 2026-10-12): Write up action items from Monday's stand-up. Due in 3 days, lower urgency.\n\nOverall, 7 tasks remain open (6 to-do, 1 in-progress) and 1 has no due date. Focus immediately on the overdue login bug and the two high-priority deadlines hitting in the next 48 hours.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue task and two high-priority tasks due within 2 days are straightforward to identify and rank.",
+            "confidence": 0.95
+          },
+          "task": null,
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "list_open_tasks",
+            "summarise_tasks"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 10384,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "f11770e7a6",
+        "sent_at": "2026-10-08T14:37:35.053+00:00"
+      },
+      {
+        "message_id": "6f0a42a898",
+        "conversation_id": "a6963e1f",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks. Here are the most urgent items:\n\n\ud83d\udd34 OVERDUE \u2014 Fix login bug on student portal (Task #5, was due 2026-10-07): A 500 error affecting users with ampersands in their passwords. Needs immediate attention.\n\n\ud83d\udd34 HIGH \u2014 Submit COIT12204 Assessment 3 (Task #1, due tomorrow 2026-10-10): Final report, code, and demo video via Moodle. Currently in progress \u2014 finish today.\n\n\ud83d\udd34 HIGH \u2014 Renew campus WiFi certificate (Task #2, due 2026-10-11): Certificate expiry will cut off staff access if missed. Due in 2 days.\n\n\ud83d\udfe1 LOW \u2014 Weekly team stand-up notes (Task #3, due 2026-10-12): Write up action items from Monday's stand-up. Due in 3 days, lower urgency.\n\nOverall, 7 tasks remain open (6 to-do, 1 in-progress) and 1 has no due date. Focus immediately on the overdue login bug and the two high-priority deadlines hitting in the next 48 hours.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue task and two high-priority tasks due within 2 days are straightforward to identify and rank.",
+            "confidence": 0.95
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "510e51fb73",
+        "sent_at": "2026-10-08T14:37:36.284+00:00"
+      },
+      {
+        "message_id": "88f3b2f0dc",
+        "conversation_id": "a6963e1f",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks. Here are the most urgent items:\n\n\ud83d\udd34 OVERDUE \u2014 Fix login bug on student portal (Task #5, was due 2026-10-07): A 500 error affecting users with ampersands in their passwords. Needs immediate attention.\n\n\ud83d\udd34 HIGH \u2014 Submit COIT12204 Assessment 3 (Task #1, due tomorrow 2026-10-10): Final report, code, and demo video via Moodle. Currently in progress \u2014 finish today.\n\n\ud83d\udd34 HIGH \u2014 Renew campus WiFi certificate (Task #2, due 2026-10-11): Certificate expiry will cut off staff access if missed. Due in 2 days.\n\n\ud83d\udfe1 LOW \u2014 Weekly team stand-up notes (Task #3, due 2026-10-12): Write up action items from Monday's stand-up. Due in 3 days, lower urgency.\n\nOverall, 7 tasks remain open (6 to-do, 1 in-progress) and 1 has no due date. Focus immediately on the overdue login bug and the two high-priority deadlines hitting in the next 48 hours.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue task and two high-priority tasks due within 2 days are straightforward to identify and rank.",
+            "confidence": 0.95
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:36.285+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "weekly_summary",
+      "task_id": null,
+      "priority": null,
+      "suggested_due_date": null,
+      "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks. Here are the most urgent items:\n\n\ud83d\udd34 OVERDUE \u2014 Fix login bug on student portal (Task #5, was due 2026-10-07): A 500 error affecting users with ampersands in their passwords. Needs immediate attention.\n\n\ud83d\udd34 HIGH \u2014 Submit COIT12204 Assessment 3 (Task #1, due tomorrow 2026-10-10): Final report, code, and demo video via Moodle. Currently in progress \u2014 finish today.\n\n\ud83d\udd34 HIGH \u2014 Renew campus WiFi certificate (Task #2, due 2026-10-11): Certificate expiry will cut off staff access if missed. Due in 2 days.\n\n\ud83d\udfe1 LOW \u2014 Weekly team stand-up notes (Task #3, due 2026-10-12): Write up action items from Monday's stand-up. Due in 3 days, lower urgency.\n\nOverall, 7 tasks remain open (6 to-do, 1 in-progress) and 1 has no due date. Focus immediately on the overdue login bug and the two high-priority deadlines hitting in the next 48 hours.",
+      "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue task and two high-priority tasks due within 2 days are straightforward to identify and rank.",
+      "confidence": 0.95
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:24+00:00",
+    "elapsed_ms": 11619
+  },
+  {
+    "id": "d729f429",
+    "request": {
+      "action": "weekly_summary",
+      "days_ahead": 7
+    },
+    "messages": [
+      {
+        "message_id": "e5e7b18c53",
+        "conversation_id": "d729f429",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:36.289+00:00"
+      },
+      {
+        "message_id": "2814e04e94",
+        "conversation_id": "d729f429",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "weekly_summary",
+            "days_ahead": 7
+          },
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks (7 still open).\n\n\ud83d\udd34 OVERDUE (act immediately):\n\u2022 Fix login bug on student portal (Task #5) \u2014 was due 2026-10-07, 2 days overdue. Users are actively hitting a 500 error.\n\n\ud83d\udfe0 DUE WITHIN 3 DAYS (high urgency):\n\u2022 Submit COIT12204 Assessment 3 (Task #1) \u2014 due tomorrow, 2026-10-10. Currently in progress; needs to be finished and submitted via Moodle today.\n\u2022 Renew campus WiFi certificate (Task #2) \u2014 due 2026-10-11. Missing this will cut off staff WiFi access.\n\n\ud83d\udfe1 DUE THIS WEEK (lower urgency):\n\u2022 Weekly team stand-up notes (Task #3) \u2014 due 2026-10-12. Write up action items from Monday's stand-up.\n\nRecommended focus order: (1) Fix login bug, (2) Submit assessment, (3) Renew WiFi cert, (4) Stand-up notes.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue item and two high-priority items due within 2 days are the most urgent; the stand-up notes are lower pressure with 3 days remaining.",
+            "confidence": 0.95
+          },
+          "task": null,
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "list_open_tasks",
+            "summarise_tasks"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 10745,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "e5e7b18c53",
+        "sent_at": "2026-10-08T14:37:47.039+00:00"
+      },
+      {
+        "message_id": "20ef003bc3",
+        "conversation_id": "d729f429",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks (7 still open).\n\n\ud83d\udd34 OVERDUE (act immediately):\n\u2022 Fix login bug on student portal (Task #5) \u2014 was due 2026-10-07, 2 days overdue. Users are actively hitting a 500 error.\n\n\ud83d\udfe0 DUE WITHIN 3 DAYS (high urgency):\n\u2022 Submit COIT12204 Assessment 3 (Task #1) \u2014 due tomorrow, 2026-10-10. Currently in progress; needs to be finished and submitted via Moodle today.\n\u2022 Renew campus WiFi certificate (Task #2) \u2014 due 2026-10-11. Missing this will cut off staff WiFi access.\n\n\ud83d\udfe1 DUE THIS WEEK (lower urgency):\n\u2022 Weekly team stand-up notes (Task #3) \u2014 due 2026-10-12. Write up action items from Monday's stand-up.\n\nRecommended focus order: (1) Fix login bug, (2) Submit assessment, (3) Renew WiFi cert, (4) Stand-up notes.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue item and two high-priority items due within 2 days are the most urgent; the stand-up notes are lower pressure with 3 days remaining.",
+            "confidence": 0.95
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "2814e04e94",
+        "sent_at": "2026-10-08T14:37:48.361+00:00"
+      },
+      {
+        "message_id": "d70c599cb8",
+        "conversation_id": "d729f429",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "weekly_summary",
+            "task_id": null,
+            "priority": null,
+            "suggested_due_date": null,
+            "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks (7 still open).\n\n\ud83d\udd34 OVERDUE (act immediately):\n\u2022 Fix login bug on student portal (Task #5) \u2014 was due 2026-10-07, 2 days overdue. Users are actively hitting a 500 error.\n\n\ud83d\udfe0 DUE WITHIN 3 DAYS (high urgency):\n\u2022 Submit COIT12204 Assessment 3 (Task #1) \u2014 due tomorrow, 2026-10-10. Currently in progress; needs to be finished and submitted via Moodle today.\n\u2022 Renew campus WiFi certificate (Task #2) \u2014 due 2026-10-11. Missing this will cut off staff WiFi access.\n\n\ud83d\udfe1 DUE THIS WEEK (lower urgency):\n\u2022 Weekly team stand-up notes (Task #3) \u2014 due 2026-10-12. Write up action items from Monday's stand-up.\n\nRecommended focus order: (1) Fix login bug, (2) Submit assessment, (3) Renew WiFi cert, (4) Stand-up notes.",
+            "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue item and two high-priority items due within 2 days are the most urgent; the stand-up notes are lower pressure with 3 days remaining.",
+            "confidence": 0.95
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:48.361+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "weekly_summary",
+      "task_id": null,
+      "priority": null,
+      "suggested_due_date": null,
+      "summary": "You have 4 tasks due in the next 7 days (plus 1 overdue), out of 8 total tasks (7 still open).\n\n\ud83d\udd34 OVERDUE (act immediately):\n\u2022 Fix login bug on student portal (Task #5) \u2014 was due 2026-10-07, 2 days overdue. Users are actively hitting a 500 error.\n\n\ud83d\udfe0 DUE WITHIN 3 DAYS (high urgency):\n\u2022 Submit COIT12204 Assessment 3 (Task #1) \u2014 due tomorrow, 2026-10-10. Currently in progress; needs to be finished and submitted via Moodle today.\n\u2022 Renew campus WiFi certificate (Task #2) \u2014 due 2026-10-11. Missing this will cut off staff WiFi access.\n\n\ud83d\udfe1 DUE THIS WEEK (lower urgency):\n\u2022 Weekly team stand-up notes (Task #3) \u2014 due 2026-10-12. Write up action items from Monday's stand-up.\n\nRecommended focus order: (1) Fix login bug, (2) Submit assessment, (3) Renew WiFi cert, (4) Stand-up notes.",
+      "reasoning": "Both list_open_tasks and summarise_tasks returned clear, consistent data. The overdue item and two high-priority items due within 2 days are the most urgent; the stand-up notes are lower pressure with 3 days remaining.",
+      "confidence": 0.95
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:36+00:00",
+    "elapsed_ms": 12072
+  },
+  {
+    "id": "15035ca3",
+    "request": {
+      "action": "classify_priority",
+      "title": "Server room aircon failed",
+      "description": "Temperature rising, servers will overheat within hours"
+    },
+    "messages": [
+      {
+        "message_id": "dd08b51d3f",
+        "conversation_id": "15035ca3",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:48.367+00:00"
+      },
+      {
+        "message_id": "18a22a97b3",
+        "conversation_id": "15035ca3",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The server room aircon failure is an active emergency: rising temperatures will cause servers to overheat within hours, making this immediately blocking for all systems and people depending on that infrastructure. This clearly meets the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "task": null,
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "summarise_tasks"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 6554,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "dd08b51d3f",
+        "sent_at": "2026-10-08T14:37:54.925+00:00"
+      },
+      {
+        "message_id": "93848f83a0",
+        "conversation_id": "15035ca3",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The server room aircon failure is an active emergency: rising temperatures will cause servers to overheat within hours, making this immediately blocking for all systems and people depending on that infrastructure. This clearly meets the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "18a22a97b3",
+        "sent_at": "2026-10-08T14:37:58.395+00:00"
+      },
+      {
+        "message_id": "eae9b477dc",
+        "conversation_id": "15035ca3",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "The server room aircon failure is an active emergency: rising temperatures will cause servers to overheat within hours, making this immediately blocking for all systems and people depending on that infrastructure. This clearly meets the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:58.396+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": null,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "The server room aircon failure is an active emergency: rising temperatures will cause servers to overheat within hours, making this immediately blocking for all systems and people depending on that infrastructure. This clearly meets the 'blocking other people or systems' criterion for high priority.",
+      "confidence": 0.99
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:48+00:00",
+    "elapsed_ms": 10029
+  },
+  {
+    "id": "e4fd8f30",
+    "request": {
+      "action": "classify_priority",
+      "title": "Server room aircon failed",
+      "description": "Temperature rising, servers will overheat within hours"
+    },
+    "messages": [
+      {
+        "message_id": "5804bbb5a9",
+        "conversation_id": "e4fd8f30",
+        "step": 0,
+        "sender": "user",
+        "receiver": "worker",
+        "intent": "execute_task",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          }
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:37:58.399+00:00"
+      },
+      {
+        "message_id": "01a62be5f9",
+        "conversation_id": "e4fd8f30",
+        "step": 1,
+        "sender": "worker",
+        "receiver": "reviewer",
+        "intent": "review_result",
+        "content": {
+          "request": {
+            "action": "classify_priority",
+            "title": "Server room aircon failed",
+            "description": "Temperature rising, servers will overheat within hours"
+          },
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "An active server room overheating emergency directly threatens critical infrastructure and will impact all dependent systems and people within hours, clearly meeting the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "task": null,
+          "fallback_used": false,
+          "warnings": [],
+          "tools_called": [
+            "summarise_tasks"
+          ],
+          "llm_calls": 2,
+          "latency_ms": 7791,
+          "revision": false
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "5804bbb5a9",
+        "sent_at": "2026-10-08T14:38:06.192+00:00"
+      },
+      {
+        "message_id": "822ac96d81",
+        "conversation_id": "e4fd8f30",
+        "step": 2,
+        "sender": "reviewer",
+        "receiver": "orchestrator",
+        "intent": "result_approved",
+        "content": {
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "An active server room overheating emergency directly threatens critical infrastructure and will impact all dependent systems and people within hours, clearly meeting the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "checked_by": "rules+model"
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": "01a62be5f9",
+        "sent_at": "2026-10-08T14:38:10.893+00:00"
+      },
+      {
+        "message_id": "f365752215",
+        "conversation_id": "e4fd8f30",
+        "step": 3,
+        "sender": "orchestrator",
+        "receiver": "user",
+        "intent": "final_result",
+        "content": {
+          "status": "approved",
+          "result": {
+            "action": "classify_priority",
+            "task_id": null,
+            "priority": "high",
+            "suggested_due_date": null,
+            "summary": null,
+            "reasoning": "An active server room overheating emergency directly threatens critical infrastructure and will impact all dependent systems and people within hours, clearly meeting the 'blocking other people or systems' criterion for high priority.",
+            "confidence": 0.99
+          },
+          "revisions": 0,
+          "errors": []
+        },
+        "constraints": {
+          "format": "json",
+          "max_revisions": 2,
+          "timeout_seconds": 45
+        },
+        "in_reply_to": null,
+        "sent_at": "2026-10-08T14:38:10.894+00:00"
+      }
+    ],
+    "steps": 3,
+    "revisions": 0,
+    "status": "approved",
+    "final_result": {
+      "action": "classify_priority",
+      "task_id": null,
+      "priority": "high",
+      "suggested_due_date": null,
+      "summary": null,
+      "reasoning": "An active server room overheating emergency directly threatens critical infrastructure and will impact all dependent systems and people within hours, clearly meeting the 'blocking other people or systems' criterion for high priority.",
+      "confidence": 0.99
+    },
+    "errors": [],
+    "started_at": "2026-10-08T14:37:58+00:00",
+    "elapsed_ms": 12495
+  }
+]

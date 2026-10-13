@@ -1,0 +1,227 @@
+{
+  "summary": {
+    "label": "reviewer=both",
+    "model": "claude-sonnet-4-6",
+    "runs": 16,
+    "approved": 0.8125,
+    "accuracy": 0.8125,
+    "with_revisions": 3,
+    "total_rejections": 9,
+    "fallbacks": 3,
+    "mean_steps": 4.1,
+    "mean_elapsed_ms": 13188
+  },
+  "rows": [
+    {
+      "case": "M1_explicit_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 8522,
+      "answer": "high"
+    },
+    {
+      "case": "M1_explicit_high",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7725,
+      "answer": "high"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7421,
+      "answer": "low"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7166,
+      "answer": "low"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 8405,
+      "answer": "medium"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7101,
+      "answer": "medium"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 6299,
+      "answer": "high"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 8189,
+      "answer": "high"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7057,
+      "answer": "2026-10-09"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7050,
+      "answer": "2026-10-09"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 1,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7795,
+      "answer": "2026-10-15"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 7383,
+      "answer": "2026-10-15"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The task data is None, but the answer references specific tasks with IDs, names, due dates, and descriptions that cannot be verified or sourced from the provided data. The agent claims to have called 'list_open_tasks' and 'summarise_tasks' but no such data was provided in the task data field. Specific details like 'Fix login bug on student portal (Task #5, was due 2026-10-07)' and 'Submit COIT12204 Assessment 3 (Task #1, due 2026-10-10)' appear fabricated since no task data was supplied.",
+        "Task data is None, but the answer references specific tasks with IDs, names, due dates, and counts that cannot be verified or sourced from any provided data. The agent claims tasks like 'Fix login bug on student portal (Task #5)' and 'Submit COIT12204 Assessment 3 (Task #1)' exist, but no task data was supplied to confirm these. The reasoning states 'list_open_tasks and summarise_tasks returned real data' but no such data is present in the task data field, indicating fabricated details.",
+        "No task data was provided to the reviewer, making it impossible to verify any of the specific claims about task IDs, titles, due dates, priorities, or counts \u2014 the answer may be entirely fabricated."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 53459,
+      "answer": "You have 4 open tasks due in the next 7 days, plus 1 overdue"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 2,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The task data is None, yet the answer invents specific tasks (Task #1, #2, #3, #5) with fabricated names, due dates, and descriptions that cannot be verified. The answer claims 8 total tasks and 7 open tasks, but no task data was provided to support these counts. The overdue task (Task #5, due 2026-10-07) and all other tasks are fabricated since there is no source data. The reasoning claims 'list_open_tasks and summarise_tasks returned clear, consistent data' but no such data was provided in the task data field.",
+        "Task data is None, so the summary cannot reference specific tasks like 'Fix login bug on student portal' or 'Submit COIT12204 Assessment 3' as these are fabricated. The claim of '4 open tasks due in the next 7 days, 1 overdue' cannot be verified because no task data was provided. The reasoning admits the model step failed, meaning the output is a fallback that invented task details rather than deriving them from real data.",
+        "No task data was provided, so all specific task names, IDs, due dates, counts, and statuses cited in the summary cannot be verified and may be fabricated."
+      ],
+      "errors": [
+        "worker crashed: InputRejected: feedback is too long (517 chars, limit 500).",
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 37349,
+      "answer": "There are 4 open tasks due in the next 7 days, with 1 alread"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "Task data is None, so there is no actual task to classify; the agent fabricated a scenario about a server room aircon failure that does not exist in the provided task data.",
+        "Task data is None, so there is no description, urgency information, or any basis to classify priority as high or reason about overheating servers.",
+        "Task data is None, so there is no description, incident details, or rubric available to support any priority classification. The reasoning references specific details (servers overheating, failed aircon unit) that do not exist in the provided task data. A confidence of 0.95 is unjustified when the task data is entirely absent."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 25697,
+      "answer": "high"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 2,
+      "status": "approved",
+      "steps": 3,
+      "revisions": 0,
+      "correct": true,
+      "rejections": [],
+      "errors": [],
+      "elapsed_ms": 4398,
+      "answer": "high"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "summary": {
+    "label": "reviewer=both worker=BROKEN",
+    "model": "claude-sonnet-4-6",
+    "runs": 8,
+    "approved": 0.0,
+    "accuracy": 0.0,
+    "with_revisions": 8,
+    "total_rejections": 24,
+    "fallbacks": 8,
+    "mean_steps": 9,
+    "mean_elapsed_ms": 10373
+  },
+  "rows": [
+    {
+      "case": "M1_explicit_high",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed. Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result.",
+        "The reasoning is a fallback due to an authentication error, meaning no actual classification was performed. Confidence of 0.3 indicates the answer is unreliable and not a genuine classification result."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 8628,
+      "answer": "high"
+    },
+    {
+      "case": "M2_housekeeping_low",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The reasoning is a technical error message about an authentication failure, not a valid classification rationale. Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis.",
+        "The reasoning is a technical error message about an authentication failure, not a valid classification rationale. Confidence of 0.3 indicates the answer is unreliable and was produced by a fallback rather than actual analysis."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 8185,
+      "answer": "low"
+    },
+    {
+      "case": "M3_unset_medium",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the classification unreliable. Confidence of 0.3 indicates the answer is not trustworthy enough to act on.",
+        "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data, making the priority classification unreliable. Confidence of 0.3 indicates the answer is not trustworthy enough to act on."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 8499,
+      "answer": "medium"
+    },
+    {
+      "case": "M4_overdue_bug_high",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data. Confidence of 0.3 indicates the classification is unreliable and should not be accepted. The due date 2026-10-07 is in the past relative to today (2026-10-09), making this task overdue, which is not acknowledged anywhere in the answer.",
+        "The reasoning is based on a fallback rule due to an authentication error, not on actual analysis of the task data. Confidence of 0.3 is too low to be considered a reliable or useful classification. The due date 2026-10-07 is in the past relative to today (2026-10-09), making this an overdue task that should be flagged, but the answer provides no summary or acknowledgment of this."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 12295,
+      "answer": "high"
+    },
+    {
+      "case": "M5_due_overdue",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this overdue status. The reasoning is a fallback due to an API authentication error, not actual analysis of the task data, making the suggestion unreliable.",
+        "The task is overdue (due 2026-10-07, today is 2026-10-09) but the summary is null and does not mention this. The reasoning is a fallback due to an API authentication error, not a real analysis of the task data."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 16637,
+      "answer": "2026-10-10"
+    },
+    {
+      "case": "M6_due_none",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "The reasoning reveals the suggestion was produced by a fallback rule after an authentication error, not by actual analysis of the task data. The priority field is None instead of reflecting the task's actual priority of 'medium'. The summary field is None, providing no useful information to the user. Confidence of 0.3 indicates the answer is unreliable and should not be surfaced as a valid suggestion.",
+        "The reasoning cites an authentication error and fallback rule rather than genuine analysis of the task data. The priority field is None instead of 'medium' as specified in the task data. The summary field is None, providing no useful explanation to the user. Confidence of 0.3 indicates the answer is unreliable and should not be surfaced to the user."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 10688,
+      "answer": "2026-10-16"
+    },
+    {
+      "case": "M7_weekly_summary",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth. The answer claims 1 overdue task and 4 tasks due in the next 7 days, but with no task data supplied these figures are unverifiable and may be fabricated. The reasoning admits the model step failed due to an authentication error, meaning the output is a fallback with low confidence (0.5) and cannot be trusted as accurate.",
+        "No task data was provided, so the summary's specific task names and counts cannot be verified against any source of truth. The answer claims 1 overdue task and lists 4 specific tasks, but with no task data available there is no way to confirm these figures or task names are accurate. Confidence is 0.5 and the reasoning admits a model failure, meaning the output is unreliable and potentially fabricated."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 11257,
+      "answer": "4 open task(s) due in the next 7 days, 1 overdue. Most urgen"
+    },
+    {
+      "case": "M8_text_urgent",
+      "repeat": 1,
+      "status": "max_revisions",
+      "steps": 9,
+      "revisions": 2,
+      "correct": false,
+      "rejections": [
+        "The answer came from the worker's fallback rules, not the model. Try again and use the task data.",
+        "Task data is None, so there is no basis for any priority classification. A fallback 'medium' priority was assigned without any task information to support it. The answer is not useful because it provides no actionable classification given the absence of task data.",
+        "Task data is None, so there is no basis for any priority classification. A fallback 'medium' priority was assigned without any task information to support it. The answer is not useful because it provides no actionable classification given the absence of task data."
+      ],
+      "errors": [
+        "max revisions (2) reached, returning last result"
+      ],
+      "elapsed_ms": 6797,
+      "answer": "medium"
+    }
+  ]
+}
